@@ -1,0 +1,911 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --warna-valet-myyellow: #fbaf0e;
+    --warna-valet-mygrey: #293142;
+    --warna-valet-myblack: #1c1c1c;
+}
+
+.super-container {
+    background-color: var(--warna-valet-myblack);
+    overflow-x: none;
+    z-index: -99999;
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: #666;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #232323;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.h1nya span.typed-text {
+    color: #fbaf0e;
+}
+
+.h1nya span.cursor {
+    display: inline-block;
+    margin-left: 3px;
+    width: 4px;
+    background-color: #fff;
+    animation: cursorBlink 1s infinite;
+}
+
+.h1nya span.cursor.typing {
+    animation: none;
+}
+
+/* loading */
+/* 
+.v-spinner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: #1c1c1c;
+} */
+
+@keyframes cursorBlink {
+    49% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+}
+
+.button {
+    background: #fbaf0e;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 96%;
+    height: 94%;
+}
+
+.button--hyperion {
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border: 1px solid #000;
+    overflow: hidden;
+    color: #fff;
+}
+
+.button--hyperion a {
+    color: #fff !important;
+}
+
+.button--hyperion span {
+    display: block;
+    position: relative;
+}
+
+.button--hyperion > span {
+    overflow: hidden;
+}
+
+.button--hyperion > span > span {
+    overflow: hidden;
+    mix-blend-mode: hard-light;
+}
+
+.button--hyperion:hover > span > span {
+    animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
+@keyframes MoveUpInitial {
+    to {
+        transform: translate3d(0, -105%, 0);
+    }
+}
+
+@keyframes MoveUpEnd {
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.button--hyperion::before {
+    content: "";
+    background: #1c1c1c;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+}
+
+.button--hyperion:hover::before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0% 50%;
+}
+
+.h1-aboutme,
+.h1-skills,
+.h1-achivement {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f2f2f2;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+
+.h1-skills {
+    padding: 0;
+    /* margin-bottom: -1rem; */
+}
+
+.h1-aboutme:after,
+.h1-skills:after,
+.h1-achivement::after {
+    content: "";
+    width: 4rem;
+    height: 3px;
+    background-color: #fbaf0e;
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+}
+
+.h1-skills:after {
+    width: 5rem;
+}
+
+.h1-achivement::after {
+    width: 6rem;
+}
+
+.h1-contact-me::after {
+    width: 11rem;
+}
+
+.tagcloud span {
+    color: #f2f2f2;
+}
+
+.tagcloud span {
+    color: #fbaf0e;
+    cursor: pointer;
+}
+
+.container-skill .card-detail-skill {
+    margin-left: -100rem;
+}
+
+.container-skill .col-detail {
+    width: 13rem;
+    transition: 1s;
+}
+
+.icon-sosmed {
+    position: relative;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.icon-sosmed i {
+    color: #fff;
+    transition: 0.4s linear;
+    font-size: 1.6rem;
+}
+
+.icon-sosmed .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #111;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+}
+
+.icon-sosmed::before,
+.icon-sosmed::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.4s linear;
+}
+
+.icon-sosmed:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.icon-sosmed span,
+.icon-sosmed:hover .tooltip {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    transform: scale(0.8);
+    transition: 0.4s linear;
+}
+
+.icon-sosmed:hover::before {
+    border-radius: 50%;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    transform: skewX(20deg);
+    color: #fbaf0e;
+}
+
+.icon-sosmed:hover::after {
+    border-radius: 50%;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    transform: skewY(-20deg);
+    color: #fbaf0e;
+}
+
+/* .card-project:hover .card-body-detail-project {
+    margin-top: 14rem;
+    animation-delay: 3s;
+    animation: hoverCardProject 2.5s forwards;
+}
+
+@keyframes hoverCardProject {
+    100% {
+        z-index: 5;
+    }
+} */
+
+/* Todo Navbar yang di index Portofolio */
+
+.nav-portofolio {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+}
+
+.nav-portofolio .link-brand {
+    font-weight: 600;
+    color: var(--warna-valet-myyellow);
+}
+
+.nav-link:hover {
+    color: var(--warna-valet-myyellow) !important;
+    cursor: pointer;
+}
+
+.h1nya {
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #e2e2e2;
+}
+
+.appreciation-link.active {
+    background-color: #fbaf0e !important;
+    box-shadow: 0 0.125rem 0.25rem 0 rgb(255 171 0 / 40%) !important;
+}
+
+.appreciation-link.active:hover {
+    color: #fff !important;
+}
+
+.appreciation-link:hover {
+    color: #fbaf0e !important;
+}
+
+.card-project-h5 {
+    color: #fbaf0e !important;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.input-contact {
+    width: 100%;
+}
+
+.card-contact {
+    background-color: rgb(46 46 46) !important;
+}
+
+.input-gabungan {
+    color: #fbaf0e !important;
+    box-shadow: none !important;
+    background-color: #1c1c1c !important;
+}
+
+.input-contact {
+    border: none !important;
+}
+/* Card Project */
+/* 
+.card {
+    height: 13rem;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .card__caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card:hover .card__thumb::after {
+    top: 0;
+}
+
+.card:hover .card__snippet {
+    margin: 20px 0;
+}
+
+.card__thumb {
+    position: relative;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .card__thumb {
+        max-height: 500px;
+    }
+}
+
+.card__thumb::after {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 40%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.3s;
+}
+
+@media (min-width: 1024px) {
+    .card__thumb::after {
+        top: calc(100% - 140px);
+    }
+}
+
+.card__image {
+    transition: 0.5s ease-in-out;
+}
+
+.card__caption {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    padding: 0 20px;
+    color: white;
+    transform: translateY(-50%);
+    text-align: center;
+    transition: 0.3s;
+}
+
+@media (min-width: 1024px) {
+    .card__caption {
+        top: calc(100% - 110px);
+        transform: unset;
+    }
+}
+
+.card__title {
+    display: -webkit-box;
+    max-height: 85px;
+    overflow: hidden;
+    font-size: 23px;
+    line-height: 28px;
+    text-shadow: 0px 1px 5px black;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card__snippet {
+    display: -webkit-box;
+    max-height: 150px;
+    margin: 20px 0;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    transition: 0.5s ease-in-out;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+@media (min-width: 1024px) {
+    .card__snippet {
+        margin: 60px 0;
+    }
+}
+
+.card__button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card__button:hover {
+    color: black;
+    background-color: white;
+}
+
+.disclaimer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: white;
+    transform: translateX(-50%);
+    font-size: 14px;
+    text-align: center;
+}
+
+.disclaimer__link {
+    color: #755d87;
+    text-decoration: none;
+} */
+
+/* ? Card Flip ? */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 22rem;
+    height: 13rem;
+    perspective: 1000px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.flip-card:hover {
+    cursor: pointer;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #424242;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 1.2rem;
+    overflow: auto;
+}
+
+.flip-card-h1 {
+    color: #fbaf0e;
+    font-weight: 600;
+}
+
+.card-body-project::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: #666;
+}
+
+.card-body-project::-webkit-scrollbar-thumb {
+    background: #232323;
+}
+
+/* ? Light Mode ? */
+body.light .super-container {
+    background-color: #f2f2f2;
+}
+
+body.light .nav-portofolio {
+    box-shadow: 0 3px 6px #0000001c;
+}
+
+body.light .h1nya {
+    color: #1c1c1c;
+}
+
+body.light .h1-aboutme,
+body.light .h1-skills,
+body.light .h1-achivement {
+    color: #1c1c1c;
+}
+
+body.light .container-skill.show .card-detail-skill,
+body.light .container-skill .card-detail-skill,
+body.light .card-light {
+    background-color: #f8f8f8 !important;
+    box-shadow: 0 3px 6px #0000001c !important;
+}
+
+body.light .card-light .card-text {
+    color: #1c1c1c !important;
+}
+
+body.light .deskripsi-detail-skill,
+body.light .icon-close-detail-skill {
+    color: #1c1c1c;
+}
+
+body.light .button--hyperion::before {
+    background-color: #f2f2f2;
+}
+
+body.light .button--hyperion {
+    color: #1c1c1c;
+    border: 1px solid #f2f2f2;
+}
+
+body.light .button--hyperion a{
+    color: #1c1c1c !important;
+}
+
+body.light .icon-sosmed i {
+    color: #1c1c1c;
+}
+
+.container-skill.show .col-detail {
+    width: 41.66666667%;
+}
+
+.container-skill.show .card-detail-skill {
+    margin: 0;
+}
+
+.container-skill.show .container-h1-skills {
+    width: auto;
+}
+
+.container-skill.show .container-h1-skills .h1-skills:after {
+    width: 3rem;
+}
+
+body.light .h1nya span.cursor {
+    background-color: #1c1c1c;
+}
+
+body.light .card-body-detail-project,
+body.light .card-contact {
+    background-color: #f8f8f8 !important;
+    box-shadow: 0 3px 6px #0000001c !important;
+}
+
+body.light .input-gabungan {
+    border: 1px solid #ced4da !important;
+    color: #495057 !important;
+    background-color: #fff !important;
+}
+
+body.light .card-body-detail-project .card-text {
+    color: #1c1c1c !important;
+}
+
+body.light .flip-card-back,
+body.light .card-project {
+    background-color: #f8f8f8 !important;
+    box-shadow: 0 3px 6px #0000001c !important;
+    color: #1c1c1c !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+body.light .card-body-project::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: rgb(255, 255, 255);
+}
+
+body.light .card-body-project::-webkit-scrollbar-thumb {
+    background: #ffab00;
+}
+
+body.light::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: rgb(255, 255, 255);
+}
+
+body.light::-webkit-scrollbar-thumb {
+    background: #ffab00;
+}
+/* .nav-logo {
+    position: relative;
+}
+
+.nav-logo a {
+    mix-blend-mode: difference;
+    font-weight: 700;
+}
+
+.nav-logo::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: -8px;
+    width: 35%;
+    border-radius: 2px;
+    background-color: #fff;
+    z-index: -1;
+    overflow: hidden;
+    animation: animate 4s infinite linear;
+    transition: 1s;
+}
+
+.nav-logo:hover::after {
+    width: 100%;
+    background-color: transparent;
+}
+
+.nav-logo a:hover {
+    color: var(--warna-valet-myyellow) !important;
+    mix-blend-mode: normal;
+} */
+
+@keyframes animate {
+    0%,
+    100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(75px);
+    }
+}
+
+/* Todo akhir navbar */
+
+/* Todo Media Query */
+
+@media (max-width: 810px) {
+    .container-nav {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .nav-portofolio {
+        width: 100% !important;
+        padding: 0.8rem 0;
+    }
+
+    .link-brand {
+        font-size: 1.3rem;
+    }
+
+    .nav-contact {
+        position: absolute;
+        right: 3.6rem;
+        top: 0.8rem;
+    }
+
+    .container-profile-1 {
+        padding: 6rem 2rem 5rem !important;
+    }
+
+    .row-profile {
+        display: grid !important;
+        grid-template-areas:
+            "image"
+            "text1";
+    }
+
+    .image {
+        grid-area: image;
+        width: 100% !important;
+    }
+
+    .text {
+        grid-area: text1 !important;
+        width: 100% !important;
+        padding-top: 9rem;
+    }
+
+    .myimg {
+        width: 15rem !important;
+    }
+
+    .svg-profil {
+        top: 0px !important;
+        right: 10px !important;
+    }
+
+    .h1nya {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 9rem;
+    }
+
+    .button--hyperion {
+        margin-top: 1rem !important;
+    }
+
+    .container-about {
+        padding: 1rem 3rem;
+    }
+
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-about {
+        width: 100%;
+    }
+
+    .container-about {
+        width: 100% !important;
+    }
+
+    .card-about-me {
+        width: 17rem !important;
+    }
+
+    .col-sosmed {
+        width: 13%;
+    }
+
+    .deskripsi-about p {
+        text-align: center;
+    }
+
+    .bungkus-h1-about {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .bungkus-h1-about .h1-aboutme::after {
+        width: 9.3rem;
+    }
+
+    .container-penghargaan,
+    .container-serti {
+        padding: 4px !important;
+    }
+
+    .container-penghargaan-2,
+    .container-serti-2 {
+        padding: 0;
+    }
+
+    .card-body-project {
+        position: static !important;
+        width: 100% !important;
+    }
+
+    .card-project {
+        height: auto !important;
+        width: 21rem !important;
+    }
+
+    .col-5-card-project {
+        width: 100%;
+    }
+
+    .img-card-project {
+        height: auto !important;
+    }
+
+    .container-project {
+        padding: 0;
+    }
+
+    .col-button-project {
+        position: absolute;
+        right: -60vw;
+    }
+
+    .card-contact {
+        padding: 0;
+    }
+
+    .col-input-contact {
+        width: 100%;
+    }
+
+    .col-input-contact:last-child {
+        margin-top: 1rem;
+    }
+
+    .container-contact-me-2 {
+        padding: 0 !important;
+    }
+
+    .row-skill {
+        display: grid;
+        grid-template-areas:
+            "bola"
+            "detail-skill";
+    }
+
+    .col-detail {
+        grid-area: detail-skill;
+        width: 65% !important;
+    }
+
+    .col-bola-skill {
+        width: 65% !important;
+        grid-area: bola;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-button-home-cv {
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
