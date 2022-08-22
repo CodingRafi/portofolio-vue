@@ -162,7 +162,7 @@
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
                                                 <img :src="`https://codingrafiadmin.devlog.my.id/storage/${penghargaan.image}`" alt="Avatar"
-                                                    style="width:22rem;height:13rem;object-fit: cover;">
+                                                    style="width:20.5rem;height:13rem;object-fit: cover;">
                                             </div>
                                             <div class="flip-card-back">
                                                 <h1 class="flip-card-h1">{{ penghargaan.nama }}</h1>
@@ -179,7 +179,7 @@
                                     <div class="flip-card-inner">
                                         <div class="flip-card-front">
                                             <img :src="`https://codingrafiadmin.devlog.my.id/storage/${sertifikat.image}`" alt="Avatar"
-                                                style="width:22rem;height:13rem;object-fit: cover;">
+                                                style="width:20.5rem;height:13rem;object-fit: cover;">
                                         </div>
                                         <div class="flip-card-back">
                                             <h1 class="flip-card-h1" style="font-size: 1.1rem;">{{ sertifikat.nama }}</h1>
@@ -200,24 +200,24 @@
                     <div class="col-10">
                         <h1 class="h1-achivement">Projects</h1>
                     </div>
-                    <div class="col col-button-project">
-                        <router-link to="/project" class="btn btn-warning">All Projects</router-link>
+                    <div class="col">
+                        <router-link to="/project" class="btn btn-warning col-button-project">All Projects</router-link>
                     </div>
                 </div>
             </div>
             <div class="container mt-3 p-0">
-                <div class="row">
+                <div class="row row-project-all">
                     <router-link class="p-0" :to="`/project/${projects[no - 1].id}`" v-for="no in projects.length"
                         style="width: 31rem;margin: 0 1.3rem;">
-
-                    <div class="card mb-3 mt-3 card-project" style="background-color: rgb(46 46 46);color: #fff;">
-                        <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`" class="card-img-top" alt="...">
-                        <div class="card-body" style="height: 8rem;overflow: auto;">
-                            <h5 class="mb-3" style="color: #cf9419;font-weight: 700;font-size: 1.2rem;">{{ projects[no-1].nama
-                            }}</h5>
-                            <p class="card-text">{{ projects[no - 1].deskripsi }}</p>
+                        <div class="card mb-3 mt-3 card-project" style="background-color: rgb(46 46 46);color: #fff;">
+                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`" class="card-img-top" alt="...">
+                            <div class="card-body card-body-card-project" style="height: 6rem;">
+                                <h5 class="mb-2" style="color: #cf9419;font-weight: 700;font-size: 1.2rem;">{{
+                                        projects[no - 1].nama
+                                }}</h5>
+                                <p class="card-text text-truncate">{{ projects[no - 1].deskripsi }}</p>
+                            </div>
                         </div>
-                    </div>
                     </router-link>
                 </div>
             </div>

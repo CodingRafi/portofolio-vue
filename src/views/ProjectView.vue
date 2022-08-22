@@ -11,13 +11,14 @@
                     </div>
                 </div>
             </div>
-            <div class="container mt-3 p-0">
-                <div class="row">
+            <div class="container p-0">
+                <div class="row row-project-all">
                     <router-link class="p-0" :to="`/project/${projects[no - 1].id}`" v-for="no in projects.length"
                         style="width: 31rem;margin: 0 1.3rem;">
                         <div class="card mb-3 mt-3 card-project" style="background-color: rgb(46 46 46);color: #fff;">
-                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`" class="card-img-top" alt="...">
-                            <div class="card-body" style="height: 6rem;">
+                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`"
+                                class="card-img-top" alt="...">
+                            <div class="card-body card-body-card-project" style="height: 6rem;">
                                 <h5 class="mb-2" style="color: #cf9419;font-weight: 700;font-size: 1.2rem;">{{
                                         projects[no - 1].nama
                                 }}</h5>

@@ -24,8 +24,8 @@
                                     <div class="flip-card" v-for="penghargaan in achievements[0]">
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img :src="`https://codingrafiadmin.devlog.my.id/storage/${penghargaan.image}`" alt="Avatar"
-                                                    style="width:22rem;height:13rem;object-fit: cover;">
+                                                <img :src="`https://codingrafiadmin.devlog.my.id/storage/${penghargaan.image}`"
+                                                    alt="Avatar" style="width:20.5rem;height:13rem;object-fit: cover;">
                                             </div>
                                             <div class="flip-card-back">
                                                 <h1 class="flip-card-h1">{{ penghargaan.nama }}</h1>
@@ -41,11 +41,12 @@
                                 <div class="flip-card" v-for="sertifikat in sertifikats[0]">
                                     <div class="flip-card-inner">
                                         <div class="flip-card-front">
-                                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${sertifikat.image}`" alt="Avatar"
-                                                style="width:22rem;height:13rem;object-fit: cover;">
+                                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${sertifikat.image}`"
+                                                alt="Avatar" style="width:20.5rem;height:13rem;object-fit: cover;">
                                         </div>
                                         <div class="flip-card-back">
-                                            <h1 class="flip-card-h1" style="font-size: 1.1rem;">{{ sertifikat.nama }}</h1>
+                                            <h1 class="flip-card-h1" style="font-size: 1.1rem;">{{ sertifikat.nama }}
+                                            </h1>
                                             <p class="mt-3 card-text">{{ sertifikat.deskripsi }}</p>
                                         </div>
                                     </div>

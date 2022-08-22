@@ -1,9 +1,9 @@
 <template>
     <ShowUser>
-        <div class="container" style="padding-top: 6rem;min-height: 100vh;width: 87%;">
+        <div class="container container-detail-project" style="padding-top: 6rem;min-height: 100vh;width: 87%;">
             <h2 style="font-size: 1.75rem;color: #CF9419;font-weight: 600;" class="mb-3">Detail Project</h2>
-            <div class="row">
-                <div class="col-7">
+            <div class="row row-detail-project-2">
+                <div class="col-7 col-7-carousel-detail-project">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div v-for="no in fotos.length" :class="`carousel-item ${(no == 1) ? 'active' : ''}`">
@@ -22,7 +22,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-5 col-5-carousel-detail-project">
                     <h5 class="mb-3" style="color: #cf9419;font-weight: 600;font-size: 1.4rem;">{{ project.nama }}</h5>
                     <p class="card-text mb-2"><span style="color: #cf9419;font-weight: 600;">Role : </span>{{
                             project.role

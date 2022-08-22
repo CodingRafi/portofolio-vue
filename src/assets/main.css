@@ -17,8 +17,16 @@
     transition: 0.5s;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
+}
+
+.container-nav{
+    width: 100vw !important;
 }
 
 body::-webkit-scrollbar-track {
@@ -731,6 +739,41 @@ body.light::-webkit-scrollbar-thumb {
 /* Todo Media Query */
 
 @media (max-width: 810px) {
+    .row-detail-project-2{
+        display: block;
+    }
+
+    .container-detail-project{
+        padding: 6rem 0 0 0 !important;
+    }
+
+    .col-7-carousel-detail-project,
+    .col-5-carousel-detail-project{
+        width: 100%;
+    }
+    
+    .col-5-carousel-detail-project{
+        margin-top: 1.5rem;
+    }
+
+    .h1-achivement{
+        margin-left: 1rem;
+    }
+
+    .row-project-all{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-body-card-project{
+        height: 7rem !important;
+    }
+
+    .container-skill, .container-project{
+        width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
     .container-nav {
         padding: 0 !important;
         margin: 0 !important;
@@ -848,7 +891,8 @@ body.light::-webkit-scrollbar-thumb {
 
     .card-project {
         height: auto !important;
-        width: 21rem !important;
+        width: 22rem !important;
+        margin: auto;
     }
 
     .col-5-card-project {
@@ -865,7 +909,7 @@ body.light::-webkit-scrollbar-thumb {
 
     .col-button-project {
         position: absolute;
-        right: -60vw;
+        right: 1rem;
     }
 
     .card-contact {
@@ -893,7 +937,7 @@ body.light::-webkit-scrollbar-thumb {
 
     .col-detail {
         grid-area: detail-skill;
-        width: 65% !important;
+        width: 100vw !important;
     }
 
     .col-bola-skill {
