@@ -67,6 +67,30 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="col-1 ms-3 p-0 col-sosmed" v-if="whatsapp">
+                                    <a :href="whatsapp" target="_blank">
+                                        <div class="icon-sosmed">
+                                            <div class="tooltip">Whatsapp</div>
+                                            <span><i class='bx bxl-whatsapp'></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-1 ms-3 p-0 col-sosmed" v-if="alamat">
+                                    <a :href="alamat" target="_blank">
+                                        <div class="icon-sosmed">
+                                            <div class="tooltip">Alamat</div>
+                                            <span><i class='bx bxs-map'></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-1 ms-3 p-0 col-sosmed" v-if="email">
+                                    <a :href="`mailto:${email}`" target="_blank">
+                                        <div class="icon-sosmed">
+                                            <div class="tooltip">Email</div>
+                                            <span><i class='bx bxs-envelope'></i></span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,6 +112,9 @@ let linkedin = ref();
 let github = ref();
 let twitter = ref();
 let youtube = ref();
+let whatsapp = ref();
+let alamat = ref();
+let email = ref();
 
 onMounted(() => {
     document.querySelector('.image-about-page').src = aboutPng;
@@ -100,8 +127,11 @@ onMounted(() => {
         github.value = response.data.configurasis[4].value;
         twitter.value = response.data.configurasis[5].value;
         youtube.value = response.data.configurasis[6].value;
+        whatsapp.value = response.data.configurasis[8].value;
+        alamat.value = response.data.configurasis[9].value;
+        email.value = response.data.configurasis[10].value;
     })
-    
+
     if (localStorage.getItem('mode') == 'light') {
         document.querySelector('body').classList.add('light');
     } else {

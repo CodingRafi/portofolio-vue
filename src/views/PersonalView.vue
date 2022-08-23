@@ -14,19 +14,12 @@
                         </h1>
                     </div>
                     <div class="container p-0 container-button-home-cv">
-                        <button class="button button--hyperion">
-                            <a href="https://codingrafiadmin.devlog.my.id/download" target="_blank" style="text-decoration: none;">
-                                <span>
-                                    <span>Download CV</span>
-                                </span>
-                            </a>
-                        </button>
+                        <MyButton/>
                     </div>
                 </div>
                 <div class="col-6 image">
                     <div class="container d-flex justify-content-center position-relative">
-                        <img src="" alt="" class="position-absolute myimg"
-                            style="width: 23rem;top: -2rem;">
+                        <img src="" alt="" class="position-absolute myimg" style="width: 23rem;top: -2rem;">
                     </div>
                 </div>
             </div>
@@ -99,6 +92,30 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="col-1 ms-3 p-0 col-sosmed" v-if="whatsapp">
+                                    <a :href="whatsapp" target="_blank">
+                                        <div class="icon-sosmed">
+                                            <div class="tooltip">Whatsapp</div>
+                                            <span><i class='bx bxl-whatsapp'></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-1 ms-3 p-0 col-sosmed" v-if="alamat">
+                                    <a :href="alamat" target="_blank">
+                                        <div class="icon-sosmed">
+                                            <div class="tooltip">Alamat</div>
+                                            <span><i class='bx bxs-map'></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-1 ms-3 p-0 col-sosmed" v-if="email">
+                                    <a :href="`mailto:${email}`" target="_blank">
+                                        <div class="icon-sosmed">
+                                            <div class="tooltip">Email</div>
+                                            <span><i class='bx bxs-envelope'></i></span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,29 +131,34 @@
                 <div class="row row-skill">
                     <div class="col-5 col-detail d-flex align-items-center justify-content-center">
                         <div class="card card-detail-skill"
-                            style="width: 20rem;transition: 1s;box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);background-color: rgb(46 46 46);border-radius: 3px;    border-radius: 5px;overflow: hidden;color: #f2f2f2;">
+                            style="width: 20rem;transition: 1s;box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);background-color: rgb(46 46 46);border-radius: 3px;    border-radius: 5px;color: #f2f2f2;">
                             <div class="card-body">
-                                <button style="position: absolute;right: 1rem;top: 1rem;border: none;background-color: transparent;"
+                                <button
+                                    style="position: absolute;right: 1rem;top: 1rem;border: none;background-color: transparent;"
                                     @click.prevent="closeDetailSkill"><i class='bx bx-x icon-close-detail-skill'
                                         style="font-size: 1.5rem;"></i></button>
-                                <div class="card"
+                                <div class="card card-img-detail-skill"
                                     style="width: 6rem;padding: 1rem;box-sizing: border-box;border-radius: 50%;display: flex;justify-content: center;align-items: center;margin: auto;overflow: hidden;height: 6rem;">
-                                    <img src="" alt="" style="width: 4rem;object-fit: cover;"
-                                        class="img-logo-card">
+                                    <img src="" alt="" style="width: 4rem;object-fit: cover;" class="img-logo-card">
                                 </div>
                                 <h5 class="card-title text-center mt-3 card-h5-skill-detail"
                                     style="color:#FBAF0E;font-weight: 600;">HTML5</h5>
-                                <p class="card-text text-center deskripsi-detail-skill">Some quick example text to build on
+                                <p class="card-text text-center deskripsi-detail-skill">Some quick example text to build
+                                    on
                                     the card title and make up
                                     the bulk of
                                     the card's content.</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100">50%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-7 col-bola-skill">
                         <div class="container-ball"></div>
                     </div>
-                </div>    
+                </div>
             </div>
         </div>
 
@@ -163,8 +185,8 @@
                                     <div class="flip-card" v-for="penghargaan in achievements[0]">
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img :src="`https://codingrafiadmin.devlog.my.id/storage/${penghargaan.image}`" alt="Avatar"
-                                                    style="width:20.5rem;height:13rem;object-fit: cover;">
+                                                <img :src="`https://codingrafiadmin.devlog.my.id/storage/${penghargaan.image}`"
+                                                    alt="Avatar" style="width:20.5rem;height:13rem;object-fit: cover;">
                                             </div>
                                             <div class="flip-card-back">
                                                 <h1 class="flip-card-h1">{{ penghargaan.nama }}</h1>
@@ -180,11 +202,12 @@
                                 <div class="flip-card" v-for="sertifikat in sertifikats[0]">
                                     <div class="flip-card-inner">
                                         <div class="flip-card-front">
-                                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${sertifikat.image}`" alt="Avatar"
-                                                style="width:20.5rem;height:13rem;object-fit: cover;">
+                                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${sertifikat.image}`"
+                                                alt="Avatar" style="width:20.5rem;height:13rem;object-fit: cover;">
                                         </div>
                                         <div class="flip-card-back">
-                                            <h1 class="flip-card-h1" style="font-size: 1.1rem;">{{ sertifikat.nama }}</h1>
+                                            <h1 class="flip-card-h1" style="font-size: 1.1rem;">{{ sertifikat.nama }}
+                                            </h1>
                                             <p class="mt-3 card-text">{{ sertifikat.deskripsi }}</p>
                                         </div>
                                     </div>
@@ -209,10 +232,11 @@
             </div>
             <div class="container mt-3 p-0">
                 <div class="row row-project-all">
-                    <router-link class="p-0 link-project" :to="`/project/${projects[no - 1].id}`" v-for="no in projects.length"
-                        style="width: 31rem;text-decoration: none;margin: .5rem;">
+                    <router-link class="p-0 link-project" :to="`/project/${projects[no - 1].id}`"
+                        v-for="no in projects.length" style="width: 33rem;text-decoration: none;margin: .5rem;">
                         <div class="card mb-3 mt-3 card-project" style="background-color: rgb(46 46 46);color: #fff;">
-                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`" class="card-img-top" alt="...">
+                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`"
+                                class="card-img-top" alt="...">
                             <div class="card-body card-body-card-project" style="height: 6rem;">
                                 <h5 class="mb-2" style="color: #cf9419;font-weight: 700;font-size: 1.2rem;">{{
                                         projects[no - 1].nama
@@ -280,6 +304,7 @@ import axios from 'axios';
 import { RouterLink, RouterView } from 'vue-router'
 import profilBg from '@/assets/image/profilBg.png'
 import aboutPng from '@/assets/image/about.png'
+import MyButton from '@/components/Button.vue'
 // import RingLoader from 'vue-spinner/src/RingLoader.vue'
 
 let typeValue = ref('');
@@ -373,6 +398,9 @@ let linkedin = ref();
 let github = ref();
 let twitter = ref();
 let youtube = ref();
+let whatsapp = ref();
+let alamat = ref();
+let email = ref();
 
 onMounted(() => {
     document.querySelector('.myimg').src = profilBg;
@@ -445,6 +473,7 @@ onMounted(() => {
     })
 
     axios.get('https://codingrafiadmin.devlog.my.id/api/get_configurasi').then((response) => {
+        console.log(response.data.configurasis)
         document.querySelector('.p-about-me').innerHTML = response.data.configurasis[0].value;
         facebook.value = response.data.configurasis[1].value;
         linkedin.value = response.data.configurasis[3].value;
@@ -452,6 +481,9 @@ onMounted(() => {
         github.value = response.data.configurasis[4].value;
         twitter.value = response.data.configurasis[5].value;
         youtube.value = response.data.configurasis[6].value;
+        whatsapp.value = response.data.configurasis[8].value;
+        alamat.value = response.data.configurasis[9].value;
+        email.value = response.data.configurasis[10].value;
     })
 
     if (localStorage.getItem('mode') == 'light') {
