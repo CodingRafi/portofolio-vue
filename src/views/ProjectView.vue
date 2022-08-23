@@ -13,8 +13,8 @@
             </div>
             <div class="container p-0">
                 <div class="row row-project-all">
-                    <router-link class="p-0" :to="`/project/${projects[no - 1].id}`" v-for="no in projects.length"
-                        style="width: 31rem;margin: 0 1.3rem;">
+                    <router-link class="p-0 link-project" :to="`/project/${projects[no - 1].id}`"
+                        v-for="no in projects.length" style="width: 31rem;text-decoration: none;margin: .5rem;">
                         <div class="card mb-3 mt-3 card-project" style="background-color: rgb(46 46 46);color: #fff;">
                             <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`"
                                 class="card-img-top" alt="...">

@@ -4,33 +4,33 @@
             <div class="container p-0" style="width: fit-content;">
                 <h1 class="h1-skills">Skills</h1>
             </div>
-            <div class="row row-skill">
-                <div class="col-5 col-detail d-flex align-items-center justify-content-center">
-                    <div class="card card-detail-skill"
-                        style="width: 20rem;transition: 1s;box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);background-color: rgb(46 46 46);border-radius: 3px;    border-radius: 5px;overflow: hidden;color: #f2f2f2;">
-                        <div class="card-body">
-                            <button style="position: absolute;right: 1rem;top: 1rem;border: none;background-color: transparent;"
-                                @click.prevent="closeDetailSkill"><i class='bx bx-x icon-close-detail-skill'
-                                    style="font-size: 1.5rem;"></i></button>
-                            <div class="card"
-                                style="width: 35%;padding: 1rem;box-sizing: border-box;border-radius: 50%;display: flex;justify-content: center;align-items: center;margin: auto;">
-                                <img src="" alt="" style="width: 5rem;object-fit: cover;"
-                                    class="img-logo-card">
+            <div class="container container-skill-2">
+                <div class="row row-skill">
+                    <div class="col-5 col-detail d-flex align-items-center justify-content-center">
+                        <div class="card card-detail-skill"
+                            style="width: 20rem;transition: 1s;box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);background-color: rgb(46 46 46);border-radius: 3px;    border-radius: 5px;overflow: hidden;color: #f2f2f2;">
+                            <div class="card-body">
+                                <button
+                                    style="position: absolute;right: 1rem;top: 1rem;border: none;background-color: transparent;"
+                                    @click.prevent="closeDetailSkill"><i class='bx bx-x icon-close-detail-skill'
+                                        style="font-size: 1.5rem;"></i></button>
+                                <div class="card"
+                                    style="width: 6rem;padding: 1rem;box-sizing: border-box;border-radius: 50%;display: flex;justify-content: center;align-items: center;margin: auto;overflow: hidden;height: 6rem;">
+                                    <img src="" alt="" style="width: 4rem;object-fit: cover;" class="img-logo-card">
+                                </div>
+                                <h5 class="card-title text-center mt-3 card-h5-skill-detail"
+                                    style="color:#FBAF0E;font-weight: 600;">HTML5</h5>
+                                <p class="card-text text-center deskripsi-detail-skill">Some quick example text to build
+                                    on
+                                    the card title and make up
+                                    the bulk of
+                                    the card's content.</p>
                             </div>
-                            <h5 class="card-title text-center mt-3 card-h5-skill-detail"
-                                style="color:#FBAF0E;font-weight: 600;">HTML5</h5>
-                            <p class="card-text text-center deskripsi-detail-skill">Some quick example text to build on
-                                the card title and make up
-                                the bulk of
-                                the card's content.</p>
-                            <!-- <div class="d-grid gap-2 mt-2">
-                                <Link class="btn btn-warning link-skill" href="#">All Project With HTML5</Link>
-                            </div> -->
                         </div>
                     </div>
-                </div>
-                <div class="col-7 col-bola-skill">
-                    <div class="container-ball"></div>
+                    <div class="col-7 col-bola-skill">
+                        <div class="container-ball"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,9 +83,9 @@ onMounted(() => {
                 containerSkill.classList.add('show');
             })
         });
-    })  
+    })
 
-     if (localStorage.getItem('mode') == 'light') {
+    if (localStorage.getItem('mode') == 'light') {
         document.querySelector('body').classList.add('light');
     } else {
         document.querySelector('body').classList.remove('light');

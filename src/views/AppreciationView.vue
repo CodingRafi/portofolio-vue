@@ -3,9 +3,9 @@
 
         <div class="container container-penghargaan" style="width: 87%;min-height: 100vh;padding-top: 6rem !important;">
             <h1 class="h1-achivement">Appreciation</h1>
-            <div class="container p-0">
-                <div class="card text-center" style="background-color: transparent;box-shadow: none;">
-                    <div class="card-header" style="padding: 1rem;">
+           <div class="container p-0">
+                <div class="card text-center" style="background-color: transparent;box-shadow: none;border: none;">
+                    <div class="card-header" style="padding: 1rem;background-color: transparent;border: none;">
                         <ul class="nav nav-pills card-header-pills">
                             <li class="nav-item">
                                 <a class="nav-link active appreciation-link" data-bs-toggle="tab"
@@ -24,8 +24,8 @@
                                     <div class="flip-card" v-for="penghargaan in achievements[0]">
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img :src="`https://codingrafiadmin.devlog.my.id/storage/${penghargaan.image}`"
-                                                    alt="Avatar" style="width:20.5rem;height:13rem;object-fit: cover;">
+                                                <img :src="`https://codingrafiadmin.devlog.my.id/storage/${penghargaan.image}`" alt="Avatar"
+                                                    style="width:20.5rem;height:13rem;object-fit: cover;">
                                             </div>
                                             <div class="flip-card-back">
                                                 <h1 class="flip-card-h1">{{ penghargaan.nama }}</h1>
@@ -41,12 +41,11 @@
                                 <div class="flip-card" v-for="sertifikat in sertifikats[0]">
                                     <div class="flip-card-inner">
                                         <div class="flip-card-front">
-                                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${sertifikat.image}`"
-                                                alt="Avatar" style="width:20.5rem;height:13rem;object-fit: cover;">
+                                            <img :src="`https://codingrafiadmin.devlog.my.id/storage/${sertifikat.image}`" alt="Avatar"
+                                                style="width:20.5rem;height:13rem;object-fit: cover;">
                                         </div>
                                         <div class="flip-card-back">
-                                            <h1 class="flip-card-h1" style="font-size: 1.1rem;">{{ sertifikat.nama }}
-                                            </h1>
+                                            <h1 class="flip-card-h1" style="font-size: 1.1rem;">{{ sertifikat.nama }}</h1>
                                             <p class="mt-3 card-text">{{ sertifikat.deskripsi }}</p>
                                         </div>
                                     </div>

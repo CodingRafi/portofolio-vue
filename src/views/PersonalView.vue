@@ -15,7 +15,7 @@
                     </div>
                     <div class="container p-0 container-button-home-cv">
                         <button class="button button--hyperion">
-                            <a href="https://codingrafiadmin.devlog.my.id/download" target="_blank">
+                            <a href="https://codingrafiadmin.devlog.my.id/download" target="_blank" style="text-decoration: none;">
                                 <span>
                                     <span>Download CV</span>
                                 </span>
@@ -110,39 +110,41 @@
             <div class="container p-0" style="width: fit-content;">
                 <h1 class="h1-skills">Skills</h1>
             </div>
-            <div class="row row-skill">
-                <div class="col-5 col-detail d-flex align-items-center justify-content-center">
-                    <div class="card card-detail-skill"
-                        style="width: 20rem;transition: 1s;box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);background-color: rgb(46 46 46);border-radius: 3px;    border-radius: 5px;overflow: hidden;color: #f2f2f2;">
-                        <div class="card-body">
-                            <button style="position: absolute;right: 1rem;top: 1rem;border: none;background-color: transparent;"
-                                @click.prevent="closeDetailSkill"><i class='bx bx-x icon-close-detail-skill'
-                                    style="font-size: 1.5rem;"></i></button>
-                            <div class="card"
-                                style="width: 6rem;padding: 1rem;box-sizing: border-box;border-radius: 50%;display: flex;justify-content: center;align-items: center;margin: auto;overflow: hidden;height: 6rem;">
-                                <img src="" alt="" style="width: 4rem;object-fit: cover;"
-                                    class="img-logo-card">
+            <div class="container container-skill-2">
+                <div class="row row-skill">
+                    <div class="col-5 col-detail d-flex align-items-center justify-content-center">
+                        <div class="card card-detail-skill"
+                            style="width: 20rem;transition: 1s;box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);background-color: rgb(46 46 46);border-radius: 3px;    border-radius: 5px;overflow: hidden;color: #f2f2f2;">
+                            <div class="card-body">
+                                <button style="position: absolute;right: 1rem;top: 1rem;border: none;background-color: transparent;"
+                                    @click.prevent="closeDetailSkill"><i class='bx bx-x icon-close-detail-skill'
+                                        style="font-size: 1.5rem;"></i></button>
+                                <div class="card"
+                                    style="width: 6rem;padding: 1rem;box-sizing: border-box;border-radius: 50%;display: flex;justify-content: center;align-items: center;margin: auto;overflow: hidden;height: 6rem;">
+                                    <img src="" alt="" style="width: 4rem;object-fit: cover;"
+                                        class="img-logo-card">
+                                </div>
+                                <h5 class="card-title text-center mt-3 card-h5-skill-detail"
+                                    style="color:#FBAF0E;font-weight: 600;">HTML5</h5>
+                                <p class="card-text text-center deskripsi-detail-skill">Some quick example text to build on
+                                    the card title and make up
+                                    the bulk of
+                                    the card's content.</p>
                             </div>
-                            <h5 class="card-title text-center mt-3 card-h5-skill-detail"
-                                style="color:#FBAF0E;font-weight: 600;">HTML5</h5>
-                            <p class="card-text text-center deskripsi-detail-skill">Some quick example text to build on
-                                the card title and make up
-                                the bulk of
-                                the card's content.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-7 col-bola-skill">
-                    <div class="container-ball"></div>
-                </div>
+                    <div class="col-7 col-bola-skill">
+                        <div class="container-ball"></div>
+                    </div>
+                </div>    
             </div>
         </div>
 
         <div class="container container-penghargaan" style="width: 87%;">
             <h1 class="h1-achivement">Appreciation</h1>
             <div class="container p-0">
-                <div class="card text-center" style="background-color: transparent;box-shadow: none;">
-                    <div class="card-header" style="padding: 1rem;">
+                <div class="card text-center" style="background-color: transparent;box-shadow: none;border: none;">
+                    <div class="card-header" style="padding: 1rem;background-color: transparent;border: none;">
                         <ul class="nav nav-pills card-header-pills">
                             <li class="nav-item">
                                 <a class="nav-link active appreciation-link" data-bs-toggle="tab"
@@ -207,8 +209,8 @@
             </div>
             <div class="container mt-3 p-0">
                 <div class="row row-project-all">
-                    <router-link class="p-0" :to="`/project/${projects[no - 1].id}`" v-for="no in projects.length"
-                        style="width: 31rem;margin: 0 1.3rem;">
+                    <router-link class="p-0 link-project" :to="`/project/${projects[no - 1].id}`" v-for="no in projects.length"
+                        style="width: 31rem;text-decoration: none;margin: .5rem;">
                         <div class="card mb-3 mt-3 card-project" style="background-color: rgb(46 46 46);color: #fff;">
                             <img :src="`https://codingrafiadmin.devlog.my.id/storage/${fotoProject[no - 1][0].nama}`" class="card-img-top" alt="...">
                             <div class="card-body card-body-card-project" style="height: 6rem;">

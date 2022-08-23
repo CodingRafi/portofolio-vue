@@ -367,6 +367,10 @@ body::-webkit-scrollbar-thumb {
 .input-contact {
     border: none !important;
 }
+
+.nav-link, .p-about-me{
+    color: #f2f2f2;
+}
 /* Card Project */
 /* 
 .card {
@@ -575,16 +579,28 @@ body::-webkit-scrollbar-thumb {
     background: #232323;
 }
 
+.row-detail-project-2{
+    color: #f2f2f2;
+}
+
 /* ? Light Mode ? */
 body.light .super-container {
     background-color: #f2f2f2;
+}
+
+body.light .row-detail-project-2{
+    color: #1c1c1c;
+}
+
+body.light .nav-link{
+    color: rgb(142, 155, 170);
 }
 
 body.light .nav-portofolio {
     box-shadow: 0 3px 6px #0000001c;
 }
 
-body.light .h1nya {
+body.light .h1nya, body.light .p-about-me{
     color: #1c1c1c;
 }
 
@@ -739,6 +755,16 @@ body.light::-webkit-scrollbar-thumb {
 /* Todo Media Query */
 
 @media (max-width: 810px) {
+    .link-project{
+        width: fit-content !important;
+    }
+
+    .container-skill-2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .row-detail-project-2{
         display: block;
     }
@@ -941,7 +967,7 @@ body.light::-webkit-scrollbar-thumb {
     }
 
     .col-bola-skill {
-        width: 65% !important;
+        width: 100vw !important;
         grid-area: bola;
         display: flex;
         justify-content: center;
